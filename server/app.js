@@ -1,0 +1,40 @@
+const path = require("path");
+const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
+const cors = require("cors");
+const connectDB = require("./config/database");
+const authRoutes = require("./routes/authRoutes");
+const userRoutes = require("./routes/userRoutes");
+const serviceRoutes = require("./routes/serviceRoutes");
+const adminRoutes = require("./routes/adminRoutes");
+const orderRoutes = require("./routes/orderRoutes");
+const webhookRoutes = require("./routes/webhookRoutes");
+const reviewRoutes = require("./routes/reviewRoutes");
+const messageRoutes = require("./routes/messageRoutes");
+
+connectDB();
+
+const app = express();
+app.use(cors());
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.set("layout", "layout");
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.use(express.json());
+
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api", serviceRoutes);
+app.use("/api/admin", adminRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api", webhookRoutes);
+app.use("/api/reviews", reviewRoutes);
+app.use("/api/messages", messageRoutes);
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
