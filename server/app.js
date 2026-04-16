@@ -33,7 +33,6 @@ app.use(cors({
   credentials: true,
 }));
 
-app.options("*", cors());
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
