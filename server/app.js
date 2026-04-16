@@ -41,7 +41,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
