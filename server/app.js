@@ -21,7 +21,8 @@ app.use(cors({
   origin: [
     "http://localhost:5173",
     "https://freelance-marketplace-lvyx.onrender.com"
-  ]
+  ],
+  credentials: true
 }));
 
 
