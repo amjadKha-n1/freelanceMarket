@@ -15,6 +15,8 @@ A full-stack freelance marketplace web application where clients can hire freela
 * Role-based access (Client, Freelancer, Admin)
 * Protected routes
 
+---
+
 ### 🔍 Advanced Search & Filtering ⭐
 
 * Search services by keywords
@@ -30,6 +32,8 @@ A full-stack freelance marketplace web application where clients can hire freela
 * Edit and delete services
 * View orders and earnings
 
+---
+
 ### 🛒 Client Features
 
 * Browse services
@@ -37,15 +41,21 @@ A full-stack freelance marketplace web application where clients can hire freela
 * Place orders
 * Leave reviews
 
+---
+
 ### 💬 Messaging System
 
 * Real-time-like messaging between users
 * Conversation-based communication
 
+---
+
 ### ⭐ Reviews & Ratings
 
 * Clients can review freelancers
 * Rating system for services
+
+---
 
 ### 💳 Payments Integration
 
