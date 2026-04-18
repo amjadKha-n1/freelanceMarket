@@ -17,26 +17,17 @@ connectDB();
 
 const app = express();
 
-const allowedOrigins = [
-  'http://localhost:3000',
-  'http://localhost:5173',
-  'https://freelance-marketplace-lvyx.onrender.com'
-];
-
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      console.log('❌ Blocked origin:', origin);
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: 'https://freelance-marketplace-lvyx.onrender.com',
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+app.use((req, res, next) => {
+  console.log(`📝 ${req.method} ${req.url}`);
+  next();
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
