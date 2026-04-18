@@ -92,7 +92,7 @@ VITE_API_URL=https://freelance-marketplace-api.onrender.com/api
 ### 1. Clone the repository
 
 ```
-git clone https://github.com/amjadKha-n1/freelance-marketplace.git
+https://github.com/amjadKha-n1/freelanceMarket.git
 ```
 
 ### 2. Setup Backend
