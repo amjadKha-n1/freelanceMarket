@@ -15,6 +15,15 @@ A full-stack freelance marketplace web application where clients can hire freela
 * Role-based access (Client, Freelancer, Admin)
 * Protected routes
 
+### 🔍 Advanced Search & Filtering ⭐
+
+* Search services by keywords
+* Filter by category, price, and other criteria
+* Dynamic query-based filtering on backend
+* Optimized API queries for performance
+
+---
+
 ### 🧑‍💻 Freelancer Features
 
 * Create and manage services
@@ -143,7 +152,6 @@ npm run dev
 ## 📌 Future Improvements
 
 * Real-time messaging with WebSockets
-* Advanced search & filtering
 * Payment system enhancements
 * Notifications system
 * UI/UX improvements
