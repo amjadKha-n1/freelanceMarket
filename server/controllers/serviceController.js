@@ -52,7 +52,7 @@ exports.getAllServices = async (req, res) => {
       "name email skills"
     );
     if (services.length === 0) {
-      return res.status(400).json({ message: "Couldn't find Services!" });
+      return res.status(200).json({ services: [] });
     }
 
     res.status(200).json({
